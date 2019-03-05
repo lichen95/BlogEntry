@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NiuNiu.BlogEntry.Common\NiuNiu.BlogEntry.Common.csproj" />
+    <ProjectReference Include="..\NiuNiu.BlogEntry.Entity\NiuNiu.BlogEntry.Entity.csproj" />
+    <ProjectReference Include="..\NiuNiu.BlogEntry.IService\NiuNiu.BlogEntry.IService.csproj" />
+    <ProjectReference Include="..\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Service.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.deps.json
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.csprojAssemblyReference.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.csproj.CoreCompileInputs.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.AssemblyInfoInputs.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.AssemblyInfo.cs
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.pdb
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Common.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Entity.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.IService.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Common.pdb
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Entity.pdb
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\bin\Debug\netcoreapp2.2\NiuNiu.BlogEntry.IService.pdb
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.csproj.CopyComplete
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry\obj\Debug\netcoreapp2.2\NiuNiu.BlogEntry.Service.pdb

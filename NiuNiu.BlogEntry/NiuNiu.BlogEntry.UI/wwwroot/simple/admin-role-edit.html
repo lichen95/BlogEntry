@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24">
+                <section class="panel panel-padding">
+                    <form id="form1" class="layui-form" action="">
+                        <div class="layui-form-item ">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">角色名称</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="name" jq-verify="required" jq-error="请输入标题" placeholder="请输入标题" autocomplete="off" class="layui-input ">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">描述</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="desc" placeholder="对角的描述" autocomplete="off" class="layui-input ">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">状态</label>
+                                <div class="layui-input-inline">
+                                    <input type="radio" name="status" title="是" value="1" checked />
+                                    <input type="radio" name="status" title="否" value="0" />
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item permission-list">
+                                <label class="layui-form-label">拥有权限</label>
+                                <div class="layui-input-block role-box" id="list">
+
+                                    <div class="jq-role-inline">
+                                        <fieldset class="layui-elem-field">
+                                            <legend><input type="checkbox" name="rules[]" value="1" title="内容管理" lay-skin="primary" lay-filter="role" /></legend>
+                                            <div class="layui-field-box">
+
+                                                <ul>
+
+                                                    <li><input type="checkbox" name="rules[]" value="2" title="内容管理" lay-skin="primary" lay-filter="role" />
+
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="文章列表" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="标签管理" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="图标管理" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="jq-role-inline">
+                                        <fieldset class="layui-elem-field">
+                                            <legend><input type="checkbox" name="rules[]" value="1" title="内容管理" lay-skin="primary" lay-filter="role" /></legend>
+                                            <div class="layui-field-box">
+
+                                                <ul>
+
+                                                    <li><input type="checkbox" name="rules[]" value="2" title="内容管理" lay-skin="primary" lay-filter="role" />
+
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="文章列表" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="标签管理" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                        <dl> <input type="checkbox" name="rules[]" value="2" title="图标管理" lay-skin="primary" lay-filter="role" />
+
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" jq-submit jq-filter="submit">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+<script>
+    layui.use('role');
+</script>
+
+</html>

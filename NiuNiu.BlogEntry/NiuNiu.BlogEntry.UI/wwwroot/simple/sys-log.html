@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24">
+                <!--头部搜索-->
+                <section class="panel panel-padding">
+                    <form class="layui-form" action="">
+                        <div class="layui-form">
+
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input class="layui-input start-date" name="start_date" placeholder="开始日">
+                                </div>
+                                <div class="layui-input-inline">
+                                    <input class="layui-input end-date" name="end_date" placeholder="截止日">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input class="layui-input" name="keyword" placeholder="关键字">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button lay-submit class="layui-btn" lay-filter="search">查找</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!--列表-->
+                <section class="panel panel-padding">
+                    <div id="list" class="layui-form">
+                        <table class="layui-table" lay-data="{height:'full-200', url:'./data/article.json',page:'true', id:'test'}" lay-filter="article">
+                            <thead>
+                                <tr>
+                                    <th lay-data="{checkbox:true}"></th>
+                                    <th lay-data="{field:'id', width:80, sort: true}">序号</th>
+                                    <th lay-data="{field:'title', width:370}">管理员</th>
+                                    <th lay-data="{field:'title', width:400, edit:'text', sort: true}">描述</th>
+                                    <th lay-data="{field:'status',toolbar: '#switch', width:120}">日期</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+<script type="text/html" id="switch">
+    2017-11-12
+</script>
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+<script>
+    layui.use('list');
+</script>
+
+</html>

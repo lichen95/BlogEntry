@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24">
+                <section class="panel panel-padding">
+                    <form id="form1" class="layui-form" action="" method="GET">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">帐号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="count" required jq-verify="required" jq-error="请输入帐号" placeholder="请输入帐号" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="pwd" placeholder="密码" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码确认</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="pwd2" placeholder="密码确认" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">所属角色</label>
+                            <div class="layui-input-inline">
+                                <select name="role">
+                        <option value="1">管理员</option>
+                        <option value="2">客服</option>
+                        <option value="3">运营</option>
+                    </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">姓名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" placeholder="姓名" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="sex" title="男" value="1" checked />
+                                <input type="radio" name="sex" title="女" value="0" />
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="tel" placeholder="手机号码" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">邮箱</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" placeholder="邮箱" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">部门</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="deparment" placeholder="部门" autocomplete="off" class="layui-input ">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">状态</label>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="switch" title="启用" value="1" checked />
+                                <input type="radio" name="switch" title="禁用" value="0" />
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" jq-submit jq-filter="submit">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+<script>
+    layui.use('myform');
+</script>
+
+</html>

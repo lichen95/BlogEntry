@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24 layui-col-sm8 layui-col-md6 layui-col-lg4  layui-col-md-offset3 layui-col-lg-offset4" style="margin-top:10%;">
+                <!--头部搜索-->
+                <section class="panel panel-padding">
+                    <h1 class="head-title">jQadmin后台模板</h1>
+                    <form class="layui-form" action="index.html">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label"><i class="iconfont">&#xe672;</i> 帐号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="name" required jq-verify="required" placeholder="登录帐号" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label"><i class="iconfont">&#xe609;</i> 密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="pwd" required jq-verify="required" placeholder="登录密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">验证码</label>
+                            <div class="layui-input-inline" style="width:80px;">
+                                <input type="text" name="pwd" required jq-verify="required" placeholder="验证码" autocomplete="off" class="layui-input">
+
+                            </div>
+                            <div class="layui-input-inline" style="width:120px;"> <img src="images/code.png" alt="" /></div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" jq-submit jq-filter="submit">立即提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+<script>
+    layui.use('myform');
+</script>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24">
+                <!--头部搜索-->
+                <section class="panel panel-padding">
+                    <form class="layui-form" action="">
+                        <div class="layui-form">
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input class="layui-input" name="keyword" placeholder="关键字">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button lay-submit class="layui-btn" lay-filter="search">查找</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!--列表-->
+                <section class="panel panel-padding">
+                    <div class="group-button">
+                        <button class="layui-btn layui-btn-sm layui-btn-danger ">
+                            <i class="iconfont">&#xe626;</i> 删除
+                        </button>
+
+                        <button class="layui-btn layui-btn-sm layui-btn-normal ">
+                            <i class="layui-icon">&#x1005;</i> 启用
+                        </button>
+                        <button class="layui-btn layui-btn-sm modal" data-params='{"content":"admin-edit.html", "title":"添加管理员","type":"2"}'>
+                            <i class="iconfont">&#xe649;</i> 添加
+                        </button>
+                    </div>
+                    <div class="layui-form">
+
+                        <table class="layui-table" lay-data="{height:'full-200', url:'./data/permission.json',page:'true', id:'test'}" lay-filter="article">
+                            <thead>
+                                <tr>
+                                    <th lay-data="{checkbox:true}"></th>
+                                    <th lay-data="{field:'id', width:80, sort: true}">序号</th>
+                                    <th lay-data="{field:'title', toolbar: '#barTitle', width:100}">帐号</th>
+                                    <th lay-data="{field:'rule', width:170}">姓名</th>
+                                    <th lay-data="{field:'tel', width:170}">手机</th>
+                                    <th lay-data="{field:'email', width:170}">邮箱</th>
+                                    <th lay-data="{field:'role', width:120}">角色</th>
+                                    <th lay-data="{field:'date', width:120}">加入时间</th>
+                                    <th lay-data="{field:'status',toolbar: '#switch', width:120}">状态</th>
+                                    <th lay-data="{fixed: 'right', width:170, align:'center', toolbar: '#barDemo'}">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs  layui-btn-primary" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs  layui-btn-primary modal" data-params='{content: "admin-edit.html",data:"id={{ d.id }}",type:"2", title: "{{d.title }}"}' lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="barTitle">
+    admin
+</script>
+
+<script type="text/html" id="switch">
+    {{# if(d.status ){ }}
+    <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF" checked> {{# }else{ }}
+    <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF"> {{# } }}
+</script>
+
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+
+<script>
+    layui.use('list');
+</script>
+
+</html>

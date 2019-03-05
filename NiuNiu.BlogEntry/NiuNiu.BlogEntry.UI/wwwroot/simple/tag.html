@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQadmin后台模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css?v=1.0.1" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/layui/css/layui.css?v=2.2.2" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v2.0.1-simple" media="all">
+</head>
+
+<body>
+    <div class="layui-fluid larry-wrapper">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-xs24">
+                <!--头部搜索-->
+                <section class="panel panel-padding">
+                    <form class="layui-form" action="" method="get">
+                        <div class="layui-form">
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input class="layui-input" name="keyword" placeholder="关键字">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button lay-submit class="layui-btn layui-btn-primary" lay-filter="search">查找</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!--列表-->
+                <section class="panel panel-padding">
+                    <div class="group-button">
+                        <button class="layui-btn layui-btn-sm layui-btn-primary ">
+                            <i class="iconfont">&#xe626;</i> 删除
+                        </button>
+
+                        <button class="layui-btn layui-btn-sm layui-btn-primary ">
+                            <i class="layui-icon">&#x1005;</i> 禁用
+                        </button>
+                        <button class="layui-btn layui-btn-primary layui-btn-sm modal" data-params='{"content": ".add-subcat", "title": "添加标签","type":"1"}'>
+                            <i class="iconfont">&#xe649;</i> 添加
+                        </button>
+                    </div>
+                    <div class="layui-form">
+
+                        <table class="layui-table" lay-data="{height:'full-200', url:'./data/cat.json',page:true, id:'test'}" lay-filter="test">
+                            <thead>
+                                <tr>
+                                    <th lay-data="{field:'id', width:80, sort: true}">ID</th>
+                                    <th lay-data="{field:'title', width:600}">名称</th>
+                                    <th lay-data="{field:'order', width:100, edit:'text', sort: true}">热度</th>
+                                    <th lay-data="{field:'status',toolbar: '#switch', width:100}">状态</th>
+                                    <th lay-data="{fixed: 'right', width:170, align:'center', toolbar: '#barDemo'}">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+
+                    </div>
+
+                    <div class="text-right" id="page"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="add-subcat">
+        <form id="form1" class="layui-form" data-params='{"dataName":"tags","key":"id","action":"add"}' action="./data/add.json" method="get">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标签名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required jq-verify="required" jq-error="请输入标签名称" placeholder="请输入标签名称" autocomplete="off" class="layui-input ">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">热度</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="order" required jq-verify="number" value="100" jq-error="标签热度必须为数字" placeholder="标签热度" autocomplete="off" class="layui-input ">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="switch" title="启用" value="1" checked />
+                    <input type="radio" name="switch" title="禁用" value="0" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" jq-submit jq-filter="submit">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs  layui-btn-primary" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs  layui-btn-primary modal" data-params='{content: ".add-subcat", title: "{{d.title }}"}' lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+
+<script type="text/html" id="switch">
+    {{# if(d.switch ){ }}
+    <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF" checked> {{# }else{ }}
+    <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF"> {{# } }}
+</script>
+
+<script type="text/javascript" src="./js/layui/layui.js?v=2.2.2"></script>
+<script type="text/javascript" src="./js/version.js?v=2.0.1"></script>
+<script src="./js/common.js?v=2.0.1"></script>
+<script>
+    layui.use('cat-list');
+</script>
+
+</html>

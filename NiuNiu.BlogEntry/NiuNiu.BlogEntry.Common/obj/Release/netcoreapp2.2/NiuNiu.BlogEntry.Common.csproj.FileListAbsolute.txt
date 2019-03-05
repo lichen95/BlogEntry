@@ -1,0 +1,9 @@
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\bin\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.deps.json
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\bin\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\bin\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.pdb
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.csprojAssemblyReference.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.csproj.CoreCompileInputs.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.AssemblyInfoInputs.cache
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.AssemblyInfo.cs
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.dll
+F:\NiuNiu.BlogEntry\NiuNiu.BlogEntry.Common\obj\Release\netcoreapp2.2\NiuNiu.BlogEntry.Common.pdb
